@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,5 +10,12 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  hero$: any;
+  service: any;
+  @Input()
+  set id(heroId: string) {
+    this.hero$ = this.service.getHero(heroId);
+  }
+
   title = 'routing-app';
 }
