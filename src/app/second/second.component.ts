@@ -15,9 +15,9 @@ export class SecondComponent {
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe((subes) => {
-      console.log('subes: ', subes);
-      this.product = subes;
+    this.route.params.subscribe((param) => {
+      console.log('param: ', param);
+      this.product = param;
     })
   }
 }
