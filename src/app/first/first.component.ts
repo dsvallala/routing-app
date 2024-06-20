@@ -14,10 +14,10 @@ export class FirstComponent {
   ) { }
 
   ngOnInit(){
-    // this.router.navigate(['subhash', '143']);
+    // this.router.navigate(['second-component', '143']);
   }
 
   productSelected(product: number) {
-    this.router.navigate(['/subhash', product]);
+    this.router.navigate(['/second-component', product]);
   }
 }
