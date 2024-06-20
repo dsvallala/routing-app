@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-second',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './second.component.css'
 })
 export class SecondComponent {
+  product: any;
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
+  ngOnInit() {
+    this.route.params.subscribe((subes) => {
+      console.log('subes: ', subes);
+      this.product = subes;
+    })
+  }
 }

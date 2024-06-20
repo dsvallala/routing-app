@@ -3,9 +3,10 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 export const routes: Routes = [
-    { path: 'first-component', component: FirstComponent },
-    { path: 'second-component', component: SecondComponent },
-    { path: 'home', redirectTo: '/first-component', pathMatch: 'full' },
-    { path: '', redirectTo: '/first-component', pathMatch: 'full' },
+    { path: 'sumedha', component: FirstComponent },
+    { path: 'sumedha', component: FirstComponent },
+    { path: 'subhash/:id', component: SecondComponent },
+    { path: 'home', redirectTo: '/sumedha', pathMatch: 'full' },
+    { path: '', redirectTo: '/sumedha', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent },
 ];
