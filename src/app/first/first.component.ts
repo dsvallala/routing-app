@@ -14,10 +14,9 @@ export class FirstComponent {
   ) { }
 
   ngOnInit(){
-    // this.router.navigate(['second-component', '143']);
   }
 
-  productSelected(product: number) {
+  productSelected(product: string) {
     this.router.navigate(['/second-component', product]);
   }
 }
